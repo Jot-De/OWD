@@ -1,0 +1,39 @@
+model OWD.mod;
+data OWD.dat;
+option solver cplex;
+
+
+printf "\n\n###########################################################\n";
+printf "# WYZNACZANIE ROZWIAZANIA OPTYMALNEGO METODA PUNKTU ODNIESIENIA \n";
+objective MaximizeRating;
+solve;
+for {t in 1..G} {
+	printf "\n\n###########################################################\n";
+	printf "GODZINA %d   \n", t;
+	printf "PRODUKCJA UJEC WODY:\n";
+	for {i in UJECIE_WODY} {
+		printf "Ujecie %s jest ", i;
+		if aktywne[t,i] 
+		then printf "wlaczone i produkuje ";
+		else printf "wylaczone i produkuje ";  
+		printf "%dt (", produkcjaWody[t,i];
+		for {r in ZAKRESY} {
+			printf "%s/", produkcjaWodyWPrzedziale[t,i,r];
+		}
+		printf ")\n";
+	}
+	printf "Zapotrzebowanie wynosi: %d, a ", zapotrzebowanieGodzinowe[t]; 
+	printf "produkcja wynosi %d\n", produkcjaGodzinowa[t];
+	printf "Koszt calkowity to %d, w tym koszt zmienny to %d, a koszt staly to %d\n", 
+		godzinowyKosztCalkowity[t], godzinowyKosztZmienny[t], kosztStalyUjecia[t];
+}
+printf "\n\n###########################################################\n";
+printf "POSUMOWANIE \n";
+printf "Calkowity koszt: %d\n", kosztCalkowity;
+printf "Calkowite zanieczyszczenie: %d\n", zanieczyszczenieCalkowite;
+printf "\n\tWartosc\tPozAspirat.\tOdleg.\t\tLambda\n";
+for {r in RATED} {
+	printf "%s\t%d\t%d\t\t%d\t\t%f\n", r, value[r], aspiration[r], distance[r], lambda[r];
+}
+
+printf "Rating: %f\n", MaximizeRating; 
