@@ -37,9 +37,10 @@ var produkcjaWody {1..G, i in UJECIE_WODY} >=0, <= maksymalnaProdukcja[i];
 # Godzinowa produkcja
 var produkcjaGodzinowa {1..G} >= 0;
 
-# Wolumen produkcji wody przypadajacy na dany zakres kosztow dla danego ujecia w danej godzinie
+# Wolumen produkcji wody przypadajacy na dany zakres kosztow dla danego ujecia 
+#w danej godzinie
 var produkcjaWodyWPrzedziale {1..G, i in UJECIE_WODY, r in ZAKRESY} >=0; 
-var rozpoczetoWysokiZakresProdukcjiWody {t in 1..G, i in UJECIE_WODY, r in ZAKRESY} binary;
+var rozpoczetoWysokiZakresProdukcjiWody {t in 1..G, i in UJECIE_WODY} binary;
 
 # Koszt zmienny poboru wody przez dane ujecie w danej godzinie
 var kosztZmiennyUjecia {1..G, UJECIE_WODY} >= 0; 
@@ -69,11 +70,9 @@ subject to ObliczGodzinowaProdukcja {t in 1..G}:
 subject to Zakres_ograniczenie_1 {t in 1..G, i in UJECIE_WODY}:
 	produkcjaWodyWPrzedziale[t,i,first(ZAKRESY)] <= progiZakresowProdukcji[i,first(ZAKRESY)];
 subject to Zakres_ograniczenie_2 {t in 1..G, i in UJECIE_WODY, r in ZAKRESY: r != first(ZAKRESY)}:
-	produkcjaWodyWPrzedziale[t,i,r] <= (progiZakresowProdukcji[i,r]-progiZakresowProdukcji[i,prev(r)]) * rozpoczetoWysokiZakresProdukcjiWody[t,i,prev(r)];
+	produkcjaWodyWPrzedziale[t,i,r] <= (progiZakresowProdukcji[i,r]-progiZakresowProdukcji[i,prev(r)]) * rozpoczetoWysokiZakresProdukcjiWody[t,i];
 subject to Zakres_ograniczenie_3 {t in 1..G, i in UJECIE_WODY}:
-	progiZakresowProdukcji[i,first(ZAKRESY)]*rozpoczetoWysokiZakresProdukcjiWody[t,i,first(ZAKRESY)] <= produkcjaWodyWPrzedziale[t,i,first(ZAKRESY)];
-subject to Zakres_ograniczenie_4 {t in 1..G, i in UJECIE_WODY, r in ZAKRESY: r != first(ZAKRESY)}:
-	(progiZakresowProdukcji[i,r]-progiZakresowProdukcji[i,prev(r)])*rozpoczetoWysokiZakresProdukcjiWody[t,i,r] <= produkcjaWodyWPrzedziale[t,i,r];
+	progiZakresowProdukcji[i,first(ZAKRESY)]*rozpoczetoWysokiZakresProdukcjiWody[t,i] <= produkcjaWodyWPrzedziale[t,i,first(ZAKRESY)];
 
 # Obliczenie wolumenu produkcji dla danego ujecia
 subject to ObliczProdukcjeUjecia {t in 1..G, i in UJECIE_WODY}:
@@ -156,11 +155,9 @@ subject to IndividualRatingSubject {r in RATED}:
 	ocenyIndywidualne[r] <= normalizedDistance[r];
 	
 ####################################################
-minimize MinimizeCost: kosztCalkowity;
-minimize MinimizePollution: zanieczyszczenieCalkowite;
-
-maximize MaximizeCost: kosztCalkowity;
-maximize MaximizePollution: zanieczyszczenieCalkowite
 
 maximize MaximizeRating: rating;
-
+minimize MinimizeCost: kosztCalkowity;
+minimize MinimizePollution: zanieczyszczenieCalkowite;
+maximize MaximizeCost: kosztCalkowity;
+maximize MaximizePollution: zanieczyszczenieCalkowite
