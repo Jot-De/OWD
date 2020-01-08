@@ -1,0 +1,70 @@
+# Ujecia wody zaopatrujace miasto w wode
+set UJECIE_WODY := A B C;
+
+# Zakresy produkcji ujec o roznych kosztach
+set ZAKRESY := NISKI WYSOKI;
+
+# Liczba godziny w których trzeba podjąc decyzje co do pracy ujęc
+param G := 4;
+
+# Zapotrzebowanie na wode w kolejnych godzinach [t]
+param	zapotrzebowanieGodzinowe :=
+	1	1246
+	2	1305
+	3	1049
+	4	475
+	;
+
+# Maksymalna produkcja ujec wody [t/h]
+param	maksymalnaProdukcja :=
+	A	614
+	B	554
+	C	909
+	;
+
+# Koszta zmienne pracy ujec [zl/t] 
+param kosztZmienny:
+		NISKI	WYSOKI :=
+	A	68 		149
+	B	62		141
+	C	71		126
+	;
+
+# Progi zakresow wolumenu produkcji o roznych kosztach [t/h]
+param progiZakresowProdukcji default 999999: 	
+		NISKI :=
+	A	552
+	B	443
+	C	818
+	;
+
+# Koszta stale pracy ujec [zl/h]
+param	kosztStaly :=
+	A	4600
+	B	5800
+	C	9000
+	;
+
+# Ilosc wytwarzanych zanieczyszczeñ [g/t]
+param	zanieczyszczenie :=
+	A	250
+	B	240
+	C	280
+	;
+
+	
+# Metoda punktu odniesienia
+
+param epsilon = 0.000025;
+
+param beta = 0.001; 
+
+param 		lambda :=
+ 	COST 	-0.00001836
+ 	POLLUT	-0.00000901
+ 	; 
+
+param 		aspiration := 
+	COST	337500
+	POLLUT	1014001
+	;
