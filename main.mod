@@ -15,7 +15,7 @@ param maksymalnaProdukcja {UJECIE_WODY} >= 0;
 param kosztZmienny {UJECIE_WODY, ZAKRESY} >= 0;
 
 # Progi zakresow wolumenu produkcji o roznych kosztach [t/h]
-param progiZakresowProdukcji {UJECIE_WODY, ZAKRESY} >= 0;
+param progiZakresowProdukcji {UJECIE_WODY} >= 0;
 
 # Koszta stale pracy ujec [zl/h]
 param kosztStaly {UJECIE_WODY} >= 0;
@@ -68,11 +68,11 @@ subject to ObliczGodzinowaProdukcja {t in 1..G}:
 
 # Ograniczenia zakresow kosztow produkcji
 subject to Zakres_ograniczenie_1 {t in 1..G, i in UJECIE_WODY}:
-	produkcjaWodyWPrzedziale[t,i,first(ZAKRESY)] <= progiZakresowProdukcji[i,first(ZAKRESY)];
+	produkcjaWodyWPrzedziale[t,i,first(ZAKRESY)] <= progiZakresowProdukcji[i];
 subject to Zakres_ograniczenie_2 {t in 1..G, i in UJECIE_WODY, r in ZAKRESY: r != first(ZAKRESY)}:
-	produkcjaWodyWPrzedziale[t,i,r] <= (progiZakresowProdukcji[i,r]-progiZakresowProdukcji[i,prev(r)]) * rozpoczetoWysokiZakresProdukcjiWody[t,i];
+	produkcjaWodyWPrzedziale[t,i,r] <= (99999999 - progiZakresowProdukcji[i]) * rozpoczetoWysokiZakresProdukcjiWody[t,i];
 subject to Zakres_ograniczenie_3 {t in 1..G, i in UJECIE_WODY}:
-	progiZakresowProdukcji[i,first(ZAKRESY)]*rozpoczetoWysokiZakresProdukcjiWody[t,i] <= produkcjaWodyWPrzedziale[t,i,first(ZAKRESY)];
+	progiZakresowProdukcji[i]*rozpoczetoWysokiZakresProdukcjiWody[t,i] <= produkcjaWodyWPrzedziale[t,i,first(ZAKRESY)];
 
 # Obliczenie wolumenu produkcji dla danego ujecia
 subject to ObliczProdukcjeUjecia {t in 1..G, i in UJECIE_WODY}:
