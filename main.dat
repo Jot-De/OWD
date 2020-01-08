@@ -31,8 +31,7 @@ param kosztZmienny:
 	;
 
 # Progi zakresow wolumenu produkcji o roznych kosztach [t/h]
-param progiZakresowProdukcji default 999999: 	
-		NISKI :=
+param	progiZakresowProdukcji :=
 	A	552
 	B	443
 	C	818
