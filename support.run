@@ -1,0 +1,39 @@
+#######################	
+# Konfiguracja modelu
+model OWD.mod;
+data OWD.dat;
+option solver cplex;
+
+printf "\n\n###########################################################\n";
+printf "# WYZNACZANIE WEKTORA UTOPII I NADIRU \n";
+
+printf "\n\n######################	#####################################\n";
+printf "Minimalny koszt \n";
+objective MinimizeCost;
+solve;
+printf "Koszt: %d\n", totalCost;
+printf "Zanieczyszczenie: %d\n", totalPollution;
+
+
+printf "\n\n###########################################################\n";
+printf "Maksymalny koszt \n";
+objective MaximizeCost;
+solve;
+printf "Koszt: %d\n", totalCost;
+printf "Zanieczyszczenie: %d\n", totalPollution;
+
+
+printf "\n\n###########################################################\n";
+printf "Minimalne zanieczyszczenie \n";
+objective MinimizePollution;
+solve;
+printf "Koszt: %d\n", totalCost;
+printf "Zanieczyszczenie: %d\n", totalPollution;
+
+
+printf "\n\n###########################################################\n";
+printf "Maksymalne zanieczyszczenie \n";
+objective MaximizePollution;
+solve;
+printf "Koszt: %d\n", totalCost;
+printf "Zanieczyszczenie: %d\n", totalPollution;
