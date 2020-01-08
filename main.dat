@@ -4,7 +4,7 @@ set UJECIE_WODY := A B C;
 # Zakresy produkcji ujec o roznych kosztach
 set ZAKRESY := NISKI WYSOKI;
 
-# Liczba godziny w których trzeba podjąc decyzje co do pracy ujęc
+# Liczba godziny w ktÃ³rych trzeba podjÄ…c decyzje co do pracy ujÄ™c
 param G := 4;
 
 # Zapotrzebowanie na wode w kolejnych godzinach [t]
@@ -45,7 +45,7 @@ param	kosztStaly :=
 	C	9000
 	;
 
-# Ilosc wytwarzanych zanieczyszczeñ [g/t]
+# Ilosc wytwarzanych zanieczyszczeÃ± [g/t]
 param	zanieczyszczenie :=
 	A	250
 	B	240
