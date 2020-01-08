@@ -1,0 +1,56 @@
+###########################################################
+# WYZNACZANIE ROZWIAZANIA OPTYMALNEGO METODA PUNKTU ODNIESIENIA 
+CPLEX 12.9.0.0: optimal integer solution; objective 0
+56 MIP simplex iterations
+0 branch-and-bound nodes
+
+
+###########################################################
+GODZINA 1   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wylaczone i produkuje 0t (0/0/)
+Ujecie B jest wlaczone i produkuje 442t (443/-1.9895196601282805e-13/)
+Ujecie C jest wlaczone i produkuje 803t (803.0000000000002/0/)
+Zapotrzebowanie wynosi: 1246, a produkcja wynosi 1246
+Koszt calkowity to 99278, w tym koszt zmienny to 84478, a koszt staly to 14800
+
+
+###########################################################
+GODZINA 2   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 552t (552/0/)
+Ujecie B jest wylaczone i produkuje 0t (0/0/)
+Ujecie C jest wlaczone i produkuje 753t (753/0/)
+Zapotrzebowanie wynosi: 1305, a produkcja wynosi 1305
+Koszt calkowity to 104599, w tym koszt zmienny to 90999, a koszt staly to 13600
+
+
+###########################################################
+GODZINA 3   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 552t (552/0/)
+Ujecie B jest wlaczone i produkuje 497t (443/54/)
+Ujecie C jest wylaczone i produkuje 0t (0/0/)
+Zapotrzebowanie wynosi: 1049, a produkcja wynosi 1049
+Koszt calkowity to 83016, w tym koszt zmienny to 72616, a koszt staly to 10400
+
+
+###########################################################
+GODZINA 4   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 32t (32/0/)
+Ujecie B jest wlaczone i produkuje 443t (443/0/)
+Ujecie C jest wylaczone i produkuje 0t (0/0/)
+Zapotrzebowanie wynosi: 475, a produkcja wynosi 475
+Koszt calkowity to 40042, w tym koszt zmienny to 29642, a koszt staly to 10400
+
+
+###########################################################
+POSUMOWANIE 
+Calkowity koszt: 326936
+Calkowite zanieczyszczenie: 1051600
+
+	Wartosc	PozAspirat.	Odleg.		Lambda
+COST	326936	326936		0		-0.000018
+POLLUT	1051600	1051600		0		-0.000009
+Rating: 0.000000

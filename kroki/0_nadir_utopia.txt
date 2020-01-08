@@ -1,0 +1,48 @@
+ampl: reset;
+ampl: include OWD2.run;
+
+
+###########################################################
+# WYZNACZANIE WEKTORA UTOPII I NADIRU 
+
+
+######################	#####################################
+Minimalny koszt 
+CPLEX 12.9.0.0: optimal integer solution; objective 326936
+3 MIP simplex iterations
+0 branch-and-bound nodes
+Koszt: 326936
+Zanieczyszczenie: 1051600
+
+
+###########################################################
+Maksymalny koszt 
+CPLEX 12.9.0.0: optimal integer solution; objective 385436
+7 MIP simplex iterations
+0 branch-and-bound nodes
+
+"option abs_boundtol 2.2737367544323206e-13;"
+or "option rel_boundtol 4.1190883232469576e-16;"
+will change deduced dual values.
+
+Koszt: 385436
+Zanieczyszczenie: 1055640
+
+
+###########################################################
+Minimalne zanieczyszczenie 
+CPLEX 12.9.0.0: optimal integer solution; objective 1003830
+0 MIP simplex iterations
+0 branch-and-bound nodes
+Koszt: 381402
+Zanieczyszczenie: 1003830
+
+
+###########################################################
+Maksymalne zanieczyszczenie 
+CPLEX 12.9.0.0: optimal integer solution; objective 1114810
+0 MIP simplex iterations
+0 branch-and-bound nodes
+Koszt: 379321
+Zanieczyszczenie: 1114810
+ampl: 

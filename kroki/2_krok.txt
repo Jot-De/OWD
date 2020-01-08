@@ -1,0 +1,70 @@
+###########################################################
+POSUMOWANIE 
+Calkowity koszt: 333148
+Calkowite zanieczyszczenie: 1016488
+
+	Wartosc	PozAspirat.	Odleg.		Lambda
+COST	333148	326936		6212		-0.000018
+POLLUT	1016488	1003830		12658		-0.000009
+Rating: -0.114059
+ampl: reset;
+ampl: include OWD.run;
+
+
+###########################################################
+# WYZNACZANIE ROZWIAZANIA OPTYMALNEGO METODA PUNKTU ODNIESIENIA 
+CPLEX 12.9.0.0: optimal integer solution; objective -0.0738471949
+29 MIP simplex iterations
+0 branch-and-bound nodes
+
+
+###########################################################
+GODZINA 1   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 552t (552/0/)
+Ujecie B jest wlaczone i produkuje 464t (443/21.35681818181814/)
+Ujecie C jest wlaczone i produkuje 229t (229.64318181818186/0/)
+Zapotrzebowanie wynosi: 1246, a produkcja wynosi 1246
+Koszt calkowity to 103717, w tym koszt zmienny to 84317, a koszt staly to 19400
+
+
+###########################################################
+GODZINA 2   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 552t (552/0/)
+Ujecie B jest wlaczone i produkuje 554t (443/111/)
+Ujecie C jest wlaczone i produkuje 199t (199/0/)
+Zapotrzebowanie wynosi: 1305, a produkcja wynosi 1305
+Koszt calkowity to 114182, w tym koszt zmienny to 94782, a koszt staly to 19400
+
+
+###########################################################
+GODZINA 3   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 552t (552/0/)
+Ujecie B jest wlaczone i produkuje 497t (443/54/)
+Ujecie C jest wylaczone i produkuje 0t (0/0/)
+Zapotrzebowanie wynosi: 1049, a produkcja wynosi 1049
+Koszt calkowity to 83016, w tym koszt zmienny to 72616, a koszt staly to 10400
+
+
+###########################################################
+GODZINA 4   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 32t (32/0/)
+Ujecie B jest wlaczone i produkuje 443t (443/0/)
+Ujecie C jest wylaczone i produkuje 0t (0/0/)
+Zapotrzebowanie wynosi: 475, a produkcja wynosi 475
+Koszt calkowity to 40042, w tym koszt zmienny to 29642, a koszt staly to 10400
+
+
+###########################################################
+POSUMOWANIE 
+Calkowity koszt: 340957
+Calkowite zanieczyszczenie: 1012025
+
+	Wartosc	PozAspirat.	Odleg.		Lambda
+COST	340957	336936		4021		-0.000018
+POLLUT	1012025	1003830		8195		-0.000009
+Rating: -0.073847
+ampl: 

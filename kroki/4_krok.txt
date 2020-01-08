@@ -1,0 +1,57 @@
+###########################################################
+# WYZNACZANIE ROZWIAZANIA OPTYMALNEGO METODA PUNKTU ODNIESIENIA 
+CPLEX 12.9.0.0: optimal integer solution; objective -2.313117789e-06
+25 MIP simplex iterations
+0 branch-and-bound nodes
+
+
+###########################################################
+GODZINA 1   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 614t (552/62/)
+Ujecie B jest wlaczone i produkuje 554t (443/111/)
+Ujecie C jest wlaczone i produkuje 78t (78/0/)
+Zapotrzebowanie wynosi: 1246, a produkcja wynosi 1246
+Koszt calkowity to 114829, w tym koszt zmienny to 95429, a koszt staly to 19400
+
+
+###########################################################
+GODZINA 2   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 614t (552/62/)
+Ujecie B jest wlaczone i produkuje 554t (443/111/)
+Ujecie C jest wlaczone i produkuje 137t (137/0/)
+Zapotrzebowanie wynosi: 1305, a produkcja wynosi 1305
+Koszt calkowity to 119018, w tym koszt zmienny to 99618, a koszt staly to 19400
+
+
+###########################################################
+GODZINA 3   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 495t (495/0/)
+Ujecie B jest wlaczone i produkuje 554t (443/111/)
+Ujecie C jest wylaczone i produkuje 0t (0/0/)
+Zapotrzebowanie wynosi: 1049, a produkcja wynosi 1049
+Koszt calkowity to 87177, w tym koszt zmienny to 76777, a koszt staly to 10400
+
+
+###########################################################
+GODZINA 4   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 0t (0.025671499881013915/0/)
+Ujecie B jest wlaczone i produkuje 474t (443/31.974328500118986/)
+Ujecie C jest wylaczone i produkuje 0t (0/0/)
+Zapotrzebowanie wynosi: 475, a produkcja wynosi 475
+Koszt calkowity to 42376, w tym koszt zmienny to 31976, a koszt staly to 10400
+
+
+###########################################################
+POSUMOWANIE 
+Calkowity koszt: 363400
+Calkowite zanieczyszczenie: 1003830
+
+	Wartosc	PozAspirat.	Odleg.		Lambda
+COST	363400	363400		0		-0.000018
+POLLUT	1003830	1003830		0		-0.000009
+Rating: -0.000002
+ampl: 

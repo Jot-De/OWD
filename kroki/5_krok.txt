@@ -1,0 +1,57 @@
+###########################################################
+# WYZNACZANIE ROZWIAZANIA OPTYMALNEGO METODA PUNKTU ODNIESIENIA 
+CPLEX 12.9.0.0: optimal integer solution; objective -0.08734148103
+33 MIP simplex iterations
+0 branch-and-bound nodes
+
+
+###########################################################
+GODZINA 1   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 552t (552/0/)
+Ujecie B jest wlaczone i produkuje 443t (443/0/)
+Ujecie C jest wlaczone i produkuje 251t (251/0/)
+Zapotrzebowanie wynosi: 1246, a produkcja wynosi 1246
+Koszt calkowity to 102223, w tym koszt zmienny to 82823, a koszt staly to 19400
+
+
+###########################################################
+GODZINA 2   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 552t (552/0/)
+Ujecie B jest wlaczone i produkuje 443t (443/0/)
+Ujecie C jest wlaczone i produkuje 310t (310/0/)
+Zapotrzebowanie wynosi: 1305, a produkcja wynosi 1305
+Koszt calkowity to 106412, w tym koszt zmienny to 87012, a koszt staly to 19400
+
+
+###########################################################
+GODZINA 3   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 552t (552/0/)
+Ujecie B jest wlaczone i produkuje 497t (443/54/)
+Ujecie C jest wylaczone i produkuje 0t (0/0/)
+Zapotrzebowanie wynosi: 1049, a produkcja wynosi 1049
+Koszt calkowity to 83016, w tym koszt zmienny to 72616, a koszt staly to 10400
+
+
+###########################################################
+GODZINA 4   
+PRODUKCJA UJEC WODY:
+Ujecie A jest wlaczone i produkuje 32t (32/0/)
+Ujecie B jest wlaczone i produkuje 443t (443/0/)
+Ujecie C jest wylaczone i produkuje 0t (0/0/)
+Zapotrzebowanie wynosi: 475, a produkcja wynosi 475
+Koszt calkowity to 40042, w tym koszt zmienny to 29642, a koszt staly to 10400
+
+
+###########################################################
+POSUMOWANIE 
+Calkowity koszt: 331693
+Calkowite zanieczyszczenie: 1017320
+
+	Wartosc	PozAspirat.	Odleg.		Lambda
+COST	331693	326936		4757		-0.000018
+POLLUT	1017320	1013868		3452		-0.000009
+Rating: -0.087341
+ampl: 
